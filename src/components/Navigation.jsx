@@ -27,7 +27,7 @@ const Navigation = (props) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="nav-item flex items-center">
-            <a href="/" className="flex items-center">
+            <a href="/OSD2025" className="flex items-center">
               <img
                 src={BRANDING.logos.main.src}
                 alt="OSW Logo"

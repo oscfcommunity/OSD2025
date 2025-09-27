@@ -2,32 +2,32 @@ import React, { useState, useCallback, useMemo } from "react";
 
 const images = [
   {
-    src: "/venue/Auditorium-1.jpeg",
+    src: "/OSD2025/venue/Auditorium-1.jpeg",
     alt: "Auditorium",
     caption: "Main Auditorium",
   },
   {
-    src: "/venue/Auditorium-2.jpeg",
+    src: "/OSD2025/venue/Auditorium-2.jpeg",
     alt: "Auditorium Stage",
     caption: "Auditorium Stage",
   },
   {
-    src: "/venue/SOU-Main.jpeg",
+    src: "/OSD2025/venue/SOU-Main.jpeg",
     alt: "Silver Oak University main building",
     caption: "Main Building",
   },
   {
-    src: "/venue/SOU-EBlock.jpeg",
+    src: "/OSD2025/venue/SOU-EBlock.jpeg",
     alt: "Silver Oak University E Block",
     caption: "E Block",
   },
   {
-    src: "/venue/SOU-Gate.jpeg",
+    src: "/OSD2025/venue/SOU-Gate.jpeg",
     alt: "Silver Oak University main gate",
     caption: "Main Gate",
   },
   {
-    src: "/venue/SOU-FoodCourt.jpeg",
+    src: "/OSD2025/venue/SOU-FoodCourt.jpeg",
     alt: "Silver Oak University food court",
     caption: "Food Court",
   },

@@ -50,7 +50,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
 
         <nav className="space-y-4">
           {[
-            { name: "Home", href: "/" },
+            { name: "Home", href: "/OSD2025" },
             { name: "Speakers", href: "/OSD2025/speakers" },
             { name: "Schedule", href: "/OSD2025/schedule" },
             { name: "Venue", href: "/OSD2025/venue" },

@@ -9,6 +9,7 @@ import partytown from "@astrojs/partytown";
 export default defineConfig({
   site: "https://oscfcommunity.github.io",
   base: "/OSD2025",
+  trailingSlash: "never",
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
