@@ -7,7 +7,8 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://osd.opensourceweekend.org",
+  site: "https://oscfcommunity.github.io",
+  base: "OSD2025",
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
