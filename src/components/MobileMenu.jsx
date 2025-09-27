@@ -1,17 +1,17 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const MobileMenu = ({ isOpen, onClose }) => {
   useEffect(() => {
     if (isOpen) {
-      const menuItems = document.querySelectorAll('.mobile-menu-item');
+      const menuItems = document.querySelectorAll(".mobile-menu-item");
       menuItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateX(-50px)';
-        item.style.transition = 'all 0.3s ease-out';
-        
+        item.style.opacity = "0";
+        item.style.transform = "translateX(-50px)";
+        item.style.transition = "all 0.3s ease-out";
+
         setTimeout(() => {
-          item.style.opacity = '1';
-          item.style.transform = 'translateX(0)';
+          item.style.opacity = "1";
+          item.style.transform = "translateX(0)";
         }, index * 100);
       });
     }
@@ -22,33 +22,40 @@ const MobileMenu = ({ isOpen, onClose }) => {
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
       {/* Backdrop */}
-      <div 
+      <div
         className="absolute inset-0 bg-black/80 backdrop-blur-sm"
         onClick={onClose}
       ></div>
-      
+
       {/* Menu */}
       <div className="relative bg-gray-900 h-full w-80 max-w-sm p-6">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-2xl font-bold gradient-text">Menu</h2>
-          <button 
-            onClick={onClose}
-            className="text-black-400 hover:text-white"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <button onClick={onClose} className="text-black-400 hover:text-white">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           </button>
         </div>
-        
+
         <nav className="space-y-4">
           {[
-            { name: 'Home', href: '/' },
-            { name: 'Speakers', href: '/speakers' },
-            { name: 'Schedule', href: '/schedule' },
-            { name: 'Venue', href: '/venue' },
-            { name: 'Tickets', href: '/tickets' },
-            { name: 'Past Events', href: '/past-events' }
+            { name: "Home", href: "/" },
+            { name: "Speakers", href: "/OSD2025/speakers" },
+            { name: "Schedule", href: "/OSD2025/schedule" },
+            { name: "Venue", href: "/OSD2025/venue" },
+            { name: "Tickets", href: "/OSD2025/tickets" },
+            { name: "Past Events", href: "/OSD2025/past-events" },
           ].map((item, _index) => (
             <a
               key={item.name}
@@ -59,7 +66,7 @@ const MobileMenu = ({ isOpen, onClose }) => {
               {item.name}
             </a>
           ))}
-          
+
           <div className="pt-6 border-t border-gray-700">
             <a
               href="https://konfhub.com/open-source-day-2025"

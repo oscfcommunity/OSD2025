@@ -401,14 +401,14 @@ export const EVENT = {
 
 export const NAVIGATION = {
   items: [
-    { name: "Speakers", href: "/speakers" },
-    { name: "Schedule", href: "/schedule" },
-    { name: "Team", href: "/team" },
-    { name: "Tickets", href: "/tickets" },
-    { name: "Sponsors", href: "/sponsors" },
-    { name: "Venue", href: "/venue" },
-    { name: "Badge", href: "/badge" },
-    { name: "Past Events", href: "/past-events" },
+    { name: "Speakers", href: "/OSD2025/speakers" },
+    { name: "Schedule", href: "/OSD2025/schedule" },
+    { name: "Team", href: "/OSD2025/team" },
+    { name: "Tickets", href: "/OSD2025/tickets" },
+    { name: "Sponsors", href: "/OSD2025/sponsors" },
+    { name: "Venue", href: "/OSD2025/venue" },
+    { name: "Badge", href: "/OSD2025/badge" },
+    { name: "Past Events", href: "/OSD2025/past-events" },
   ],
   cta: {
     text: "Register Now",
@@ -1000,12 +1000,12 @@ export const FOOTER = {
   description:
     "Open Source Day 2025 - A community-driven event celebrating open source innovation. Join developers, maintainers, and enthusiasts for learning and collaboration.",
   quickLinks: [
-    { name: "Speakers", href: "/speakers" },
-    { name: "Schedule", href: "/schedule" },
-    { name: "Venue", href: "/venue" },
-    { name: "Tickets", href: "/tickets" },
+    { name: "Speakers", href: "/OSD2025/speakers" },
+    { name: "Schedule", href: "/OSD2025/schedule" },
+    { name: "Venue", href: "/OSD2025/venue" },
+    { name: "Tickets", href: "/OSD2025/tickets" },
     { name: "My Badge", href: "/my-badge" },
-    { name: "Past Events", href: "/past-events" },
+    { name: "Past Events", href: "/OSD2025/past-events" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },

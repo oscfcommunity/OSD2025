@@ -119,7 +119,7 @@ const Hero = () => {
             {HERO.buttons.primary.text}
           </a>
           <a
-            href="/schedule"
+            href="/OSD2025/schedule"
             className="w-full sm:w-auto border-2 border-green-600 text-green-700 hover:bg-green-600 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-200 hover:scale-105 transform text-center"
           >
             {HERO.buttons.secondary.text}
