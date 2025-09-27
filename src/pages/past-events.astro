@@ -1,0 +1,208 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "@/layouts/Layout.astro";
+import Heading from "@components/Heading.astro";
+import "@/styles/global.css";
+
+import { PastEvent } from "@/config";
+
+// const pastEvents = [
+//   {
+//     year: "2024",
+//     title: "OpenSource Weekend 2024",
+//     attendees: "450+",
+//     speakers: "35",
+//     projects: "80+",
+//     highlights: [
+//       "Launched 15 new open source projects",
+//       "Record-breaking hackathon participation",
+//       "First-ever AI/ML track",
+//       "Global livestream with 10K+ viewers",
+//     ],
+//     images: [
+//       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop",
+//       "https://images.unsplash.com/photo-1559223607-b4d0555ae227?w=600&h=400&fit=crop",
+//       "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=600&h=400&fit=crop",
+//     ],
+//   },
+//   {
+//     year: "2023",
+//     title: "OpenSource Weekend 2023",
+//     attendees: "380+",
+//     speakers: "28",
+//     projects: "65+",
+//     highlights: [
+//       "Introduction of sustainability track",
+//       "Youth coding bootcamp",
+//       "Open source security summit",
+//       "Community awards ceremony",
+//     ],
+//     images: [
+//       "https://images.unsplash.com/photo-1591115765373-5207764f72e7?w=600&h=400&fit=crop",
+//       "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=600&h=400&fit=crop",
+//       "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop",
+//     ],
+//   },
+//   {
+//     year: "2022",
+//     title: "OpenSource Weekend 2022",
+//     attendees: "320+",
+//     speakers: "22",
+//     projects: "50+",
+//     highlights: [
+//       "First hybrid event format",
+//       "Women in Open Source panel",
+//       "Blockchain and Web3 workshops",
+//       "Mentorship program launch",
+//     ],
+//     images: [
+//       "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=600&h=400&fit=crop",
+//       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop",
+//       "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop",
+//     ],
+//   },
+// ];
+---
+
+<Layout title="Past Events — 2025 OSD" activePath="/past-events">
+  <!-- Heading Section -->
+  <Heading
+    title="Past Events"
+    description="Look back at the incredible moments, innovations, and connections made at previous OpenSource Weekend events."
+  />
+
+  <!-- Overall Stats -->
+  <section class="py-10 px-4 bg-gradient-to-b from-green-400 to-green-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center text-white mb-12">
+        Our Impact Over the Years
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
+        <div>
+          <div class="text-4xl md:text-6xl font-bold gradient-text mb-2">
+            10k+
+          </div>
+          <div class="text-black-300">Total Attendees</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-6xl font-bold gradient-text mb-2">
+            300+
+          </div>
+          <div class="text-black-300">Meetups</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-6xl font-bold gradient-text mb-2">
+            600+
+          </div>
+          <div class="text-black-300">Speakers</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-6xl font-bold gradient-text mb-2">
+            500+
+          </div>
+          <div class="text-black-300">Topics Covered</div>
+        </div>
+        <div>
+          <div class="text-4xl md:text-6xl font-bold gradient-text mb-2">
+            50+
+          </div>
+          <div class="text-black-300">Community Partners</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Past Events Timeline Updated -->
+  <section class="py-10 px-4">
+    <div class="max-w-screen mx-auto space-y-36">
+      {
+        PastEvent.map((event) => (
+          <div class="text-center">
+            <span class="text-green-400 font-bold text-lg block mb-2">
+              {event.year}
+            </span>
+            <h3 class="text-4xl font-bold text-black mb-12">{event.title}</h3>
+            <div class="flex flex-wrap justify-center gap-6 mb-8">
+              {event.images.map((url) => (
+                <div class="aspect-w-16 aspect-h-9 w-72 max-w-full rounded-lg overflow-hidden shadow-md">
+                  <Image
+                    src={url}
+                    alt={event.title}
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                    width={800}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <!-- <section class="py-20 px-4 bg-gradient-to-r from-green-900/50 to-white/50">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center text-black mb-12">
+        What Attendees Say
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-green-400 rounded-xl border border-green-500/20 backdrop-blur-sm p-6">
+          <div class="flex items-center mb-4">
+            <img
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face"
+              alt="Alex Chen"
+              class="w-12 h-12 rounded-full mr-4"
+            />
+            <div>
+              <h4 class="text-white font-semibold">Alex Chen</h4>
+              <p class="text-white text-sm">Software Engineer</p>
+            </div>
+          </div>
+          <p class="text-black-300 italic">
+            "OpenSource Weekend changed my career trajectory. The connections I
+            made and projects I discovered opened up incredible opportunities."
+          </p>
+        </div>
+
+        <div class="bg-green-400 rounded-xl border border-green-500/20 backdrop-blur-sm p-6">
+          <div class="flex items-center mb-4">
+            <img
+              src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face"
+              alt="Maria Rodriguez"
+              class="w-12 h-12 rounded-full mr-4"
+            />
+            <div>
+              <h4 class="text-white font-semibold">Maria Rodriguez</h4>
+              <p class="text-white text-sm">Tech Lead</p>
+            </div>
+          </div>
+          <p class="text-black-300 italic">
+            "The quality of speakers and workshops is unmatched. I learned more
+            in two days than I had in months of self-study."
+          </p>
+        </div>
+
+        <div class="bg-green-400 rounded-xl border border-green-500/20 backdrop-blur-sm p-6">
+          <div class="flex items-center mb-4">
+            <img
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
+              alt="David Kim"
+              class="w-12 h-12 rounded-full mr-4"
+            />
+            <div>
+              <h4 class="text-white font-semibold">David Kim</h4>
+              <p class="text-white text-sm">Startup Founder</p>
+            </div>
+          </div>
+          <p class="text-black-300 italic">
+            "The hackathon was incredible! Our team's project got picked up by a
+            major company and we're now building it full-time."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+</Layout>
